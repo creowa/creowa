@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Packages - CREOWA Digital Marketing Agency</title>
+    <meta name="description" content="Explore our comprehensive digital marketing service packages tailored to meet your business needs. From startups to enterprises, we have solutions for everyone.">
+    <meta property="og:title" content="Service Packages - CREOWA Digital Marketing Agency">
+    <meta property="og:description" content="Creative Growth, Optimized Results">
+    <meta property="og:image" content="https://i.ibb.co/RTTxZz9k/main-w.png">
+    <meta property="og:url" content="https://creowa.com/services">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8a2be2;
+            --secondary-color: #4169e1;
+            --accent-color: #00d4ff;
+            --dark-color: #0a0a1a;
+            --darker-color: #050510;
+            --light-color: #f8f9fa;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0b0;
+            --glass-bg: rgba(20, 20, 40, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-highlight: rgba(255, 255, 255, 0.05);
+            --gradient-1: linear-gradient(135deg, #8a2be2, #4169e1);
+            --gradient-2: linear-gradient(135deg, #00d4ff, #0099cc);
+            --gradient-bg: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a0a1a 100%);
+            --success-color: #2ed573;
+            --warning-color: #ffa502;
+            --danger-color: #ff4757;
+            --whatsapp-color: #25D366;
+            --call-color: #128C7E;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+            background: var(--gradient-bg);
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-2);
+            border-radius: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-2);
+            z-index: -1;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-outline::before {
+            background: var(--accent-color);
+        }
+        
+        .btn-outline:hover {
+            color: white;
+            border-color: var(--accent-color);
+        }
+        
+        /* Glass Card Component */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(10, 10, 26, 0.5);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(138, 43, 226, 0.3);
+            border-color: rgba(138, 43, 226, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 80%, rgba(65, 105, 225, 0.2) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .tagline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--gradient-1);
+            border-radius: 2px;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            background: rgba(10, 10, 26, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li {
+            display: flex;
+            align-items: center;
+        }
+        
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin: 0 10px;
+            font-size: 0.7rem;
+        }
+        
+        .breadcrumb-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb-list a:hover {
+            color: var(--accent-color);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--accent-color);
+        }
+        
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .tab-btn {
+            padding: 15px 35px;
+            background: rgba(20, 20, 40, 0.6);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tab-btn i {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+        }
+        
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--gradient-1);
+            border-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+        }
+        
+        .tab-btn.active i,
+        .tab-btn:hover i {
+            color: white;
+        }
+        
+        /* Service Section */
+        .service-section {
+            padding: 60px 0;
+            display: none;
+        }
+        
+        .service-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .service-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .service-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.6);
+        }
+        
+        .service-description {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Packages Grid */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .package-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px 0 rgba(10, 10, 26, 0.5);
+            padding: 0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .package-card.featured {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px 0 rgba(0, 212, 255, 0.3);
+        }
+        
+        .package-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--gradient-2);
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 212, 255, 0.4);
+        }
+        
+        .package-header {
+            padding: 40px 30px 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            position: relative;
+        }
+        
+        .package-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .package-card.featured .package-icon {
+            background: var(--gradient-2);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        .package-card:hover .package-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.5);
+        }
+        
+        .package-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .package-price {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        
+        .package-card.featured .package-price {
+            color: #00ff88;
+        }
+        
+        .package-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        
+        .package-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        
+        .package-body {
+            padding: 35px 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .package-features {
+            list-style: none;
+            margin-bottom: 35px;
+            flex-grow: 1;
+        }
+        
+        .package-features li {
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            line-height: 1.4;
+        }
+        
+        .package-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 1.1rem;
+        }
+        
+        .package-features li.exclude::before {
+            content: '\f00d';
+            color: var(--danger-color);
+        }
+        
+        .package-footer {
+            padding: 0 30px 35px;
+        }
+        
+        .package-btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .package-card.featured .package-btn {
+            background: var(--gradient-2);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        .package-card.featured .package-btn:hover {
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        /* Contact Options Modal */
+        .contact-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            max-width: 450px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .contact-modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .modal-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 71, 87, 0.2);
+            border-color: var(--danger-color);
+            color: var(--danger-color);
+            transform: rotate(90deg);
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-option {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-option.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.1);
+            border-color: var(--whatsapp-color);
+        }
+        
+        .contact-option.call:hover {
+            background: rgba(18, 140, 126, 0.1);
+            border-color: var(--call-color);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .contact-option.whatsapp .contact-icon {
+            background: var(--whatsapp-color);
+        }
+        
+        .contact-option.call .contact-icon {
+            background: var(--call-color);
+        }
+        
+        .contact-info {
+            flex-grow: 1;
+        }
+        
+        .contact-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .contact-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .contact-arrow {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-option:hover .contact-arrow {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, var(--darker-color) 0%, var(--dark-color) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-content h2 {
+            margin-bottom: 25px;
+        }
+        
+        .cta-content p {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 1.05rem;
+        }
+        
+        /* Mobile-specific adjustments */
+        @media (max-width: 1024px) {
+            .packages-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .package-card.featured {
+                transform: scale(1);
+            }
+            
+            .package-card.featured:hover {
+                transform: translateY(-5px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .package-price {
+                font-size: 2.5rem;
+            }
+            
+            .category-tabs {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
+            .service-section {
+                padding: 40px 0;
+            }
+            
+            .cta-section {
+                padding: 50px 0;
+            }
+            
+            .package-header {
+                padding: 30px 20px 20px;
+            }
+            
+            .package-body {
+                padding: 25px 20px;
+            }
+            
+            .package-footer {
+                padding: 0 20px 25px;
+            }
+            
+            .contact-option {
+                padding: 15px;
+            }
+            
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                margin-right: 15px;
+            }
+            
+            .contact-label {
+                font-size: 1rem;
+            }
+            
+            .contact-description {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Service Packages</h1>
+                <div class="tagline">Choose Your Perfect Plan</div>
+                <p>Simple, transparent pricing designed to help your business grow. Each service category offers Basic, Premium, and Pro packages to match your specific needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li>Service Packages</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Category Tabs -->
+    <div class="container">
+        <div class="category-tabs">
+            <button class="tab-btn active" data-tab="digital-marketing">
+                <i class="fas fa-bullhorn"></i>
+                Digital Marketing
+            </button>
+            <button class="tab-btn" data-tab="web-design">
+                <i class="fas fa-laptop-code"></i>
+                Web Design
+            </button>
+            <button class="tab-btn" data-tab="content-creation">
+                <i class="fas fa-pen-fancy"></i>
+                Content Creation
+            </button>
+        </div>
+    </div>
+
+    <!-- Digital Marketing Section -->
+    <section id="digital-marketing" class="service-section active">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h2>Digital Marketing Packages</h2>
+                <p class="service-description">Comprehensive digital marketing solutions to boost your online presence, engage your audience, and drive measurable results across all digital channels.</p>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- Basic Digital Marketing -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="package-name">Basic</h3>
+                        <div class="package-price">LKR 127,500<span>/month</span></div>
+                        <p class="package-description">Perfect for small businesses starting their digital journey</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>2 Social Media Platforms</li>
+                            <li>Basic SEO Setup</li>
+                            <li>3 Posts per Week</li>
+                            <li>Monthly Analytics Report</li>
+                            <li>Basic Email Marketing</li>
+                            <li>Community Management</li>
+                            <li class="exclude">Paid Advertising</li>
+                            <li class="exclude">Advanced Analytics</li>
+                            <li class="exclude">Influencer Marketing</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Basic Digital Marketing" data-price="LKR 127,500/month">Choose Basic</button>
+                    </div>
+                </div>
+
+                <!-- Premium Digital Marketing -->
+                <div class="package-card featured">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="package-name">Premium</h3>
+                        <div class="package-price">LKR 255,000<span>/month</span></div>
+                        <p class="package-description">Ideal for growing businesses with expanding needs</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>4 Social Media Platforms</li>
+                            <li>Advanced SEO Strategy</li>
+                            <li>5 Posts per Week</li>
+                            <li>Bi-weekly Analytics Report</li>
+                            <li>Advanced Email Marketing</li>
+                            <li>24/7 Community Management</li>
+                            <li>Basic Paid Advertising</li>
+                            <li>Competitor Analysis</li>
+                            <li class="exclude">Influencer Marketing</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Premium Digital Marketing" data-price="LKR 255,000/month">Choose Premium</button>
+                    </div>
+                </div>
+
+                <!-- Pro Digital Marketing -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="package-name">Pro</h3>
+                        <div class="package-price">LKR 479,500<span>/month</span></div>
+                        <p class="package-description">Complete solution for enterprises and market leaders</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Unlimited Social Media Platforms</li>
+                            <li>Enterprise SEO Strategy</li>
+                            <li>Daily Posting</li>
+                            <li>Weekly Analytics Report</li>
+                            <li>Advanced Email Marketing</li>
+                            <li>24/7 Community Management</li>
+                            <li>Advanced Paid Advertising</li>
+                            <li>Influencer Marketing Campaigns</li>
+                            <li>Custom Strategy Development</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Pro Digital Marketing" data-price="LKR 479,500/month">Choose Pro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Design Section -->
+    <section id="web-design" class="service-section">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h2>Web Design Packages</h2>
+                <p class="service-description">Stunning, responsive websites and web applications that captivate your audience and deliver exceptional user experiences across all devices.</p>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- Basic Web Design -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="package-name">Basic</h3>
+                        <div class="package-price">LKR 287,500<span>/one-time</span></div>
+                        <p class="package-description">Professional website for small businesses</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Up to 5 Pages Website</li>
+                            <li>Fully Responsive Design</li>
+                            <li>Basic Branding Integration</li>
+                            <li>Contact Form Integration</li>
+                            <li>Basic SEO Setup</li>
+                            <li>3 Months Free Hosting</li>
+                            <li class="exclude">Custom Animations</li>
+                            <li class="exclude">E-commerce Functionality</li>
+                            <li class="exclude">CMS Integration</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Basic Web Design" data-price="LKR 287,500/one-time">Choose Basic</button>
+                    </div>
+                </div>
+
+                <!-- Premium Web Design -->
+                <div class="package-card featured">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="package-name">Premium</h3>
+                        <div class="package-price">LKR 575,000<span>/one-time</span></div>
+                        <p class="package-description">Advanced website with custom features</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Up to 15 Pages Website</li>
+                            <li>Custom Responsive Design</li>
+                            <li>Advanced Branding & Logo Design</li>
+                            <li>Multiple Contact Forms</li>
+                            <li>Advanced SEO Implementation</li>
+                            <li>1 Year Free Hosting</li>
+                            <li>Custom Animations & Interactions</li>
+                            <li>Basic E-commerce Functionality</li>
+                            <li class="exclude">CMS Integration</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Premium Web Design" data-price="LKR 575,000/one-time">Choose Premium</button>
+                    </div>
+                </div>
+
+                <!-- Pro Web Design -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="package-name">Pro</h3>
+                        <div class="package-price">LKR 1,119,500<span>/one-time</span></div>
+                        <p class="package-description">Enterprise web solution with full functionality</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Unlimited Pages Website</li>
+                            <li>Enterprise Responsive Design</li>
+                            <li>Complete Brand Identity Package</li>
+                            <li>Advanced Form & Database Integration</li>
+                            <li>Enterprise SEO Strategy</li>
+                            <li>2 Years Free Hosting & Maintenance</li>
+                            <li>Advanced Animations & Micro-interactions</li>
+                            <li>Full E-commerce Solution</li>
+                            <li>CMS Integration & Training</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Pro Web Design" data-price="LKR 1,119,500/one-time">Choose Pro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Creation Section -->
+    <section id="content-creation" class="service-section">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <h2>Content Creation Packages</h2>
+                <p class="service-description">Engaging, high-quality content that tells your story, builds your brand, and connects with your target audience across multiple platforms.</p>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- Basic Content Creation -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3 class="package-name">Basic</h3>
+                        <div class="package-price">LKR 159,500<span>/month</span></div>
+                        <p class="package-description">Essential content for consistent online presence</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>4 Blog Posts per Month</li>
+                            <li>Basic Social Media Content</li>
+                            <li>1 Infographic per Month</li>
+                            <li>Basic Image Editing</li>
+                            <li>Content Calendar Planning</li>
+                            <li>Monthly Content Report</li>
+                            <li class="exclude">Video Content</li>
+                            <li class="exclude">Advanced SEO Content</li>
+                            <li class="exclude">Podcast Production</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Basic Content Creation" data-price="LKR 159,500/month">Choose Basic</button>
+                    </div>
+                </div>
+
+                <!-- Premium Content Creation -->
+                <div class="package-card featured">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="package-name">Premium</h3>
+                        <div class="package-price">LKR 287,500<span>/month</span></div>
+                        <p class="package-description">Comprehensive content with video production</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>8 Blog Posts per Month</li>
+                            <li>Advanced Social Media Content</li>
+                            <li>2 Infographics per Month</li>
+                            <li>Professional Image Editing</li>
+                            <li>Advanced Content Strategy</li>
+                            <li>Bi-weekly Content Report</li>
+                            <li>2 Videos per Month</li>
+                            <li>Advanced SEO Content</li>
+                            <li class="exclude">Podcast Production</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Premium Content Creation" data-price="LKR 287,500/month">Choose Premium</button>
+                    </div>
+                </div>
+
+                <!-- Pro Content Creation -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h3 class="package-name">Pro</h3>
+                        <div class="package-price">LKR 479,500<span>/month</span></div>
+                        <p class="package-description">Complete content solution with multimedia production</p>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>16 Blog Posts per Month</li>
+                            <li>Premium Social Media Content</li>
+                            <li>4 Infographics per Month</li>
+                            <li>Professional Photo Editing</li>
+                            <li>Enterprise Content Strategy</li>
+                            <li>Weekly Content Report</li>
+                            <li>4 Videos per Month</li>
+                            <li>Advanced SEO Content Strategy</li>
+                            <li>Podcast Production & Management</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <button class="btn package-btn" data-package="Pro Content Creation" data-price="LKR 479,500/month">Choose Pro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeContactModal()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <h3 class="modal-title">Choose How to Connect</h3>
+                <p class="modal-subtitle">Select your preferred way to get in touch with us</p>
+            </div>
+            <div class="contact-options">
+                <a href="tel:+94783601646" class="contact-option call" onclick="closeContactModal()">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">Call Us</div>
+                        <div class="contact-description">Speak directly with our team</div>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                <a href="https://wa.me/+94783601646" class="contact-option whatsapp" id="whatsappLink" onclick="closeContactModal()">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-label">WhatsApp</div>
+                        <div class="contact-description">Chat with us instantly</div>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom Package?</h2>
+                <p>Don't see exactly what you're looking for? Let's create a tailored solution that perfectly fits your business goals, budget, and requirements.</p>
+                <button class="btn" id="customQuoteBtn">Get Custom Quote</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const serviceSections = document.querySelectorAll('.service-section');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+                
+                // Update active button
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Update active section
+                serviceSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === tabName) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Contact Modal functionality
+        const contactModal = document.getElementById('contactModal');
+        const whatsappLink = document.getElementById('whatsappLink');
+        let selectedPackage = '';
+        let selectedPrice = '';
+
+        function openContactModal(packageName, price) {
+            selectedPackage = packageName;
+            selectedPrice = price;
+            
+            // Create WhatsApp message
+            const message = `Hi! I'm interested in the ${packageName} package (${price}). Could you provide more information about this service?`;
+            const whatsappUrl = `https://wa.me/+94783601646?text=${encodeURIComponent(message)}`;
+            whatsappLink.href = whatsappUrl;
+            
+            // Show modal
+            contactModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            contactModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Package button click handler
+        function attachPackageButtonListeners() {
+            const packageButtons = document.querySelectorAll('.package-btn');
+            packageButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const packageName = button.getAttribute('data-package');
+                    const price = button.getAttribute('data-price');
+                    openContactModal(packageName, price);
+                });
+            });
+        }
+
+        // Custom Quote button functionality
+        const customQuoteBtn = document.getElementById('customQuoteBtn');
+        customQuoteBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Create custom WhatsApp message
+            const message = `Hi! I'm interested in a custom package for my business. Could you help me create a tailored solution that fits my specific needs?`;
+            const whatsappUrl = `https://wa.me/+94783601646?text=${encodeURIComponent(message)}`;
+            whatsappLink.href = whatsappUrl;
+            
+            // Show modal
+            contactModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Initial attachment
+        attachPackageButtonListeners();
+
+        // Close modal when clicking outside
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeContactModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+                closeContactModal();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe package cards in active section
+        function observeActiveSection() {
+            const activeSection = document.querySelector('.service-section.active');
+            if (activeSection) {
+                activeSection.querySelectorAll('.package-card').forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                    observer.observe(card);
+                });
+            }
+        }
+
+        // Initial observation
+        observeActiveSection();
+
+        // Re-observe when tab changes
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                setTimeout(observeActiveSection, 100);
+            });
+        });
+    </script>
+</body>
+</html>
