@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Creowa Pvt Ltd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      :root {
+    --primary-color: #6366f1;
+    --secondary-color: #8b5cf6;
+    --accent-color: #ec4899;
+    --dark-bg: #0f172a;
+    --dark-secondary: #1e293b;
+    --dark-tertiary: #334155;
+    --light-bg: #ffffff;
+    --light-secondary: #f8fafc;
+    --light-tertiary: #f1f5f9;
+    --text-dark: #1e293b;
+    --text-light: #e2e8f0;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --bg-color: var(--dark-bg);
+    --bg-secondary: var(--dark-secondary);
+    --bg-tertiary: var(--dark-tertiary);
+    --text-color: var(--text-light);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --nav-bg: rgba(15, 23, 42, 0.85);
+}
+
+[data-theme="light"] {
+    --bg-color: var(--light-bg);
+    --bg-secondary: var(--light-secondary);
+    --bg-tertiary: var(--light-tertiary);
+    --text-color: var(--text-dark);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --nav-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Header */
+.header {
+    padding: 2rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Theme Switch */
+.theme-switch {
+    --toggle-size: 20px;
+    --container-width: 4em;
+    --container-height: 1.5em;
+    --container-radius: 6.25em;
+    --container-light-bg: #3D7EAE;
+    --container-night-bg: #1D1F2C;
+    --circle-container-diameter: 2.2em;
+    --sun-moon-diameter: 1.3em;
+    --sun-bg: #ECCA2F;
+    --moon-bg: #C4C9D1;
+    --spot-color: #959DB1;
+    --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
+    --stars-color: #fff;
+    --clouds-color: #F3FDFF;
+    --back-clouds-color: #AACADF;
+    --transition: .5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
+    display: inline-block;
+}
+
+.theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: var(--toggle-size);
+}
+
+.theme-switch__container {
+    width: var(--container-width);
+    height: var(--container-height);
+    background-color: var(--container-light-bg);
+    border-radius: var(--container-radius);
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
+    box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    position: relative;
+}
+
+.theme-switch__container::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    -webkit-box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+    border-radius: var(--container-radius)
+}
+
+.theme-switch__checkbox {
+    display: none;
+}
+
+.theme-switch__circle-container {
+    width: var(--circle-container-diameter);
+    height: var(--circle-container-diameter);
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: var(--circle-container-offset);
+    top: var(--circle-container-offset);
+    border-radius: var(--container-radius);
+    -webkit-box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: var(--circle-transition);
+    -o-transition: var(--circle-transition);
+    transition: var(--circle-transition);
+    pointer-events: none;
+}
+
+.theme-switch__sun-moon-container {
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+    width: var(--sun-moon-diameter);
+    height: var(--sun-moon-diameter);
+    margin: auto;
+    border-radius: var(--container-radius);
+    background-color: var(--sun-bg);
+    -webkit-box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
+    box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
+    -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.theme-switch__moon {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--moon-bg);
+    border-radius: inherit;
+    -webkit-box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
+    box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    position: relative;
+}
+
+.theme-switch__spot {
+    position: absolute;
+    top: 0.4em;
+    left: 0.16em;
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: var(--container-radius);
+    background-color: var(--spot-color);
+    -webkit-box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
+}
+
+.theme-switch__spot:nth-of-type(2) {
+    width: 0.2em;
+    height: 0.2em;
+    top: 0.5em;
+    left: 0.7em;
+}
+
+.theme-switch__spot:nth-last-of-type(3) {
+    width: 0.13em;
+    height: 0.13em;
+    top: 0.16em;
+    left: 0.42em;
+}
+
+.theme-switch__clouds {
+    width: 0.66em;
+    height: 0.66em;
+    background-color: var(--clouds-color);
+    border-radius: var(--container-radius);
+    position: absolute;
+    bottom: -0.33em;
+    left: 0.16em;
+    -webkit-box-shadow: 0.5em 0.16em var(--clouds-color), -0.16em -0.16em var(--back-clouds-color), 0.76em 0.2em var(--clouds-color), 0.26em -0.066em var(--back-clouds-color), 1.16em 0 var(--clouds-color), 0.66em -0.032em var(--back-clouds-color), 1.55em 0.16em var(--clouds-color), 1.06em -0.16em var(--back-clouds-color), 1.92em -0.032em var(--clouds-color), 1.39em 0em var(--back-clouds-color), 2.38em -0.16em var(--clouds-color), 1.78em -0.23em var(--back-clouds-color), 2.44em -0.92em 0 0.23em var(--clouds-color), 2.12em -0.33em var(--back-clouds-color), 2.18em -1.12em 0 0.23em var(--back-clouds-color);
+    box-shadow: 0.5em 0.16em var(--clouds-color), -0.16em -0.16em var(--back-clouds-color), 0.76em 0.2em var(--clouds-color), 0.26em -0.066em var(--back-clouds-color), 1.16em 0 var(--clouds-color), 0.66em -0.032em var(--back-clouds-color), 1.55em 0.16em var(--clouds-color), 1.06em -0.16em var(--back-clouds-color), 1.92em -0.032em var(--clouds-color), 1.39em 0em var(--back-clouds-color), 2.38em -0.16em var(--clouds-color), 1.78em -0.23em var(--back-clouds-color), 2.44em -0.92em 0 0.23em var(--clouds-color), 2.12em -0.33em var(--back-clouds-color), 2.18em -1.12em 0 0.23em var(--back-clouds-color);
+    -webkit-transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    -o-transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+}
+
+.theme-switch__stars-container {
+    position: absolute;
+    color: var(--stars-color);
+    top: -100%;
+    left: 0.16em;
+    width: 1.45em;
+    height: auto;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+/* actions */
+.theme-switch__checkbox:checked + .theme-switch__container {
+    background-color: var(--container-night-bg);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.1em)
+}
+
+.theme-switch__circle-container:hover {
+    left: calc(var(--circle-container-offset) + 0.1em);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {
+    bottom: -2.15em;
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Main Content */
+.coming-soon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+                     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+                     radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* Circle Rotate Animation */
+.circle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.circle-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--gradient);
+    top: -250px;
+    right: -250px;
+    animation: rotate 30s linear infinite;
+}
+
+.circle-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--gradient);
+    bottom: -200px;
+    left: -200px;
+    animation: rotate 25s linear infinite reverse;
+}
+
+.circle-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--gradient);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite;
+}
+
+.circle-4 {
+    width: 200px;
+    height: 200px;
+    background: var(--gradient);
+    top: 20%;
+    left: 10%;
+    animation: rotate 15s linear infinite reverse;
+}
+
+.circle-5 {
+    width: 150px;
+    height: 150px;
+    background: var(--gradient);
+    bottom: 20%;
+    right: 10%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.coming-soon-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.coming-soon-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    text-align: center;
+    min-width: 100px;
+}
+
+.countdown-number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    font-size: 1rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Email Subscription */
+.subscription {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+}
+
+.subscription-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    flex: 1;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    background: var(--bg-tertiary);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+    outline: none;
+}
+
+.btn-gradient {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.btn-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.btn-gradient:hover::before {
+    transform: translateX(0);
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    color: white;
+}
+
+.privacy-text {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--gradient);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Info Section */
+.info-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+}
+
+.info-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.info-text {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+    background: var(--gradient);
+    flex-shrink: 0;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    opacity: 1;
+}
+
+.contact-item i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* Toast Notification */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.custom-toast {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+}
+
+.custom-toast.show {
+    transform: translateX(0);
+}
+
+.toast-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.toast-success .toast-icon {
+    color: #10b981;
+}
+
+.toast-error .toast-icon {
+    color: #ef4444;
+}
+
+.toast-info .toast-icon {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coming-soon-title {
+        font-size: 2.5rem;
+    }
+    
+    .coming-soon-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .countdown {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        min-width: 80px;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .subscription-form {
+        flex-direction: column;
+    }
+    
+    .btn-gradient {
+        width: 100%;
+    }
+    
+    /* Adjust circle sizes for small screens */
+    .circle-1 {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        right: -150px;
+    }
+    
+    .circle-2 {
+        width: 250px;
+        height: 250px;
+        bottom: -125px;
+        left: -125px;
+    }
+    
+    .circle-3 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .circle-4 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .circle-5 {
+        width: 100px;
+        height: 100px;
+    }
+}
+    </style>
+</head>
+<body data-theme="dark">
+    <!-- Header -->
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <i class="bi bi-lightning-charge-fill"></i>
+                Creowa Pvt Ltd
+            </div>
+            
+            <!-- Theme Switch -->
+            <label class="theme-switch">
+                <input type="checkbox" class="theme-switch__checkbox" id="themeToggle">
+                <div class="theme-switch__container">
+                    <div class="theme-switch__clouds"></div>
+                    <div class="theme-switch__stars-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <div class="theme-switch__circle-container">
+                        <div class="theme-switch__sun-moon-container">
+                            <div class="theme-switch__moon">
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="coming-soon">
+        <div class="bg-pattern"></div>
+        
+        <!-- Circle Rotate Animation -->
+        <div class="circle-container">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-5"></div>
+        </div>
+        
+        <div class="content">
+            <h1 class="coming-soon-title" data-aos="fade-up">We're <span class="gradient-text">Coming Soon</span></h1>
+            <p class="coming-soon-subtitle" data-aos="fade-up" data-aos-delay="100">Our new website is under construction. Something amazing is on the way!</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" data-aos="fade-up" data-aos-delay="200">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+
+            
+            <!-- Social Links -->
+            <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            </div>
+            
+            <!-- Info Section -->
+            <div class="info-section" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="info-title">What's Coming?</h3>
+                <p class="info-text">We're working hard to bring you a revolutionary digital marketing platform that will transform how businesses connect with their audience.</p>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <span>Advanced AI-powered marketing tools</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <span>Real-time analytics and insights</span>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <span>Expert consultation services</span>
+                    </li>
+                </ul>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <span>info@creowa.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Creowa Pvt Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', savedTheme);
+        
+        // Set the checkbox state based on saved theme
+        if (savedTheme === 'light') {
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', () => {
+            const newTheme = themeToggle.checked ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Countdown Timer
+        // Set the date we're counting down to (30 days from now)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 30);
+        
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result in the elements
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            
+            // If the count down is finished, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                
+                // Show a toast notification
+                showToast("We're live! Check out our new website now.", "success");
+            }
+        }, 1000);
+
+        // Toast Notification Function
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer');
+            
+            const toast = document.createElement('div');
+            toast.className = `custom-toast toast-${type}`;
+            
+            let icon = '';
+            switch(type) {
+                case 'success':
+                    icon = '<i class="bi bi-check-circle-fill toast-icon"></i>';
+                    break;
+                case 'error':
+                    icon = '<i class="bi bi-x-circle-fill toast-icon"></i>';
+                    break;
+                default:
+                    icon = '<i class="bi bi-info-circle-fill toast-icon"></i>';
+            }
+            
+            toast.innerHTML = `${icon} <span>${message}</span>`;
+            
+            toastContainer.appendChild(toast);
+            
+            // Trigger animation
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+            
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Subscription Form Submission
+        document.getElementById('subscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get the email value
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            showToast(`Thank you for subscribing! We'll notify you at ${email} when we launch.`, 'success');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
